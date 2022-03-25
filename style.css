@@ -1,0 +1,102 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 6fr 1fr;
+  place-items: center;
+  background-color: hsl(34, 33%, 97%);  
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+main h1 {
+  font-family: 'Lora', serif;
+  font-weight: 400;
+  font-size: 2.5rem;
+  z-index: 1;
+  color: hsl(0, 0%, 20%);
+}
+
+main img {
+  position: relative;
+  width: 270px;
+  border-radius: 8px;
+  z-index: 0;
+  margin: 20px 0;
+  box-shadow: 0px 0px 14px 4px rgba(0,0,0,0.1);
+}
+
+main h1:last-of-type {
+  position: relative;
+  text-align: end;
+}
+
+main h1:last-of-type::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  transform: translate(5px, 40%);
+  width: 30px;
+  height: 30px;
+  background-image: url('./images/icons/star-icon.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  width: 100%;
+}
+
+footer ul {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  gap: 5px;
+  width: 100%;
+  height: 100%;
+  padding: 20px 40px;
+  border-right: 1px solid #CEAB93;
+}
+
+footer ul li a:hover {
+  color: #CEAB93;
+}
+
+a {
+  text-decoration: none;
+  color: hsla(0, 0%, 20%, .9);
+}
+
+footer > a {
+  display: flex;
+  justify-content: space-evenly;
+  width: 120px;
+  color: white;
+  background-color: #AD8B73;
+  justify-self: start;
+  padding: 10px 20px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+footer > a::after {
+  content: '->';
+  color: white;
+}
